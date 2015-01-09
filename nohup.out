@@ -1,0 +1,12 @@
+/usr/lib/python2.6/site-packages/zerorpc/events.py:31: DeprecationWarning: gevent.coros has been renamed to gevent.lock
+  import gevent.coros
+/usr/lib/python2.6/site-packages/zerorpc/events.py:42: DeprecationWarning: Queue(0) now equivalent to Queue(None); if you want a channel, use Channel
+  self._send_queue = gevent.queue.Queue(maxsize=0)
+/usr/lib/python2.6/site-packages/zerorpc/events.py:75: DeprecationWarning: Queue(0) now equivalent to Queue(None); if you want a channel, use Channel
+  self._recv_queue = gevent.queue.Queue(maxsize=0)
+/usr/lib/python2.6/site-packages/zerorpc/heartbeat.py:41: DeprecationWarning: Queue(0) now equivalent to Queue(None); if you want a channel, use Channel
+  self._input_queue = gevent.queue.Queue(maxsize=0)
+No handlers could be found for logger "zerorpc.core"
+No handlers could be found for logger "zerorpc.core"
+Server listening on port 80
+API listening on port 8080

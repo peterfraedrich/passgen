@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<head>
+	<title>PASSGEN</title>
+	<link rel="stylesheet" href="./style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script>
+		function generate() {
+		console.log('getting new password');
+			var xmlHttp = new XMLHttpRequest();
+			xmlHttp.open( "GET", "http://10.10.10.15:8080/generate", false );
+			xmlHttp.send( null );
+			console.log( xmlHttp.responseText);
+			document.getElementById('pword').innerHTML = xmlHttp.responseText;
+		};
+	</script>		
+
+</head>
+
+<body>
+	<div id='wrapper'><center>
+	<h1 id='heading'>4-Word Password Generator</h1>
+	<p id='greentext'>Press the button to generate a password.</p>
+	<input id='gen_btn' type="button" name="generate" onClick="generate()" value="Generate!">
+	<h2 id="pword"></h2></center>
+	</div>
+
+</body>
+
+</html>
