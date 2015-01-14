@@ -47,14 +47,14 @@ var allowCrossDomain = function(req, res, next) {
 
 // SET UP RPC ============================================================//
 
-   var client = new zerorpc.Client();
-   function rpc() {
-	client.connect('tcp://127.0.0.1:8081');
-	var password = client.invoke('generate','RPC', function(error, res, more) {
-		return res;
-	});
-	return password;
-   };
+  var client = new zerorpc.Client();
+  function rpc() {
+  	client.connect('tcp://127.0.0.1:8081');
+  	var password = client.invoke('generate','RPC', function(error, res, more) {
+  		  return res;
+      });
+    return password;
+  };
 
 // API HOOKS ==============================================================//
 
@@ -67,8 +67,7 @@ var allowCrossDomain = function(req, res, next) {
 //// GENERATE
 	app.get('/generate', function (req, res) {
 		client.connect('tcp://127.0.0.1:8081');
-		client.invoke('generate','RPC', function(error, res, more) { console.log(res); global.password = res; })
-		console.log(global.password);
+		client.invoke('generate','RPC', function(error, res, more) { global.password = res; })
 		res.send(global.password);	
 		res.end();
 	});
@@ -78,6 +77,6 @@ var allowCrossDomain = function(req, res, next) {
 
 connect ()
   .use(connect.static(__dirname)).listen(httpPort);
-console.log('Server listening on port 80');
+console.log('Web server listening on port 80');
 app.listen(apiPort);
 console.log('API listening on port 8080');
