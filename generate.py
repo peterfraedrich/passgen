@@ -5,6 +5,7 @@ import random as rand
 import zerorpc
 import logging
 from datetime import datetime
+import sys
 
 def log(message):
 	if os.path.exists('python.log'):
