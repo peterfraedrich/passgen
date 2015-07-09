@@ -3,16 +3,17 @@
 <head>
 	<title>PASSGEN</title>
 	<link rel="stylesheet" href="./style.css">
+	<script type='text/javascript'> window.onload = function(){ window.document.forms[0].submit(); }; </script>
 </head>
 
 <body>
 	<div id='wrapper'><center>
 	<h1 id='heading'>4-Word Password Generator</h1>
 	<p id='greentext'>Press the button to generate a password.</p>
-	<form method="post" action="generate.py">
+	<form method="post" action="../cgi-bin/generate.py" target="pword">
 		<input id='gen_btn' type="submit" name="generate" onClick="generate.py" value="Generate!"></submit>
 	</form>
-	<h2 id="pword"></h2></center>
+	<iframe name="pword" id="pword"></iframe></center>
 	</div>
 
 </body>

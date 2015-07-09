@@ -54,6 +54,7 @@ if __name__ == '__main__':
 		password = main()
 		print 'Content-Type: text/html'
 		print ''
-		print '<h2>' + str(password) + '</h2>'
+		print '<style>h2{font-family:Helvetica,Arial,sans-serif;font-size:20px;color:#111;}</style>'
+		print '<center><h2>' + str(password) + '</h2></center>'
 	except:
 		log('exception generated in __main__, unable to complete script [exception in passgen:__main__]')
